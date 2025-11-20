@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pixel bloom</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+    <header>
+    <h1>PIXEL BLOOM</h1>
+    <p class="subtitle">Find practical inspirations and ideas for all your 
+        daily projects</p>
+    <div class="search-container">
+    <input type="text" id="search-input"  placeholder="search ...">
+    <button id="search-btn"><i class="fas fa-search"></i>Search</button><!-- Icône de recherche -->
+    </div>
+    <div class="keywords">
+        <div class="keyword">arial  city night</div>
+        <div class="keyword">minimal workspace</div>
+        <div class="keyword">nature landscape</div>
+        <div class="keyword">modern architecture</div>
+        <div class="keyword">portrait photography</div> 
+    </div>
+    <div class="categories">
+        <div class="categorie">All</div>
+        <div class="categorie">Nature</div>
+        <div class="categorie">Architecture</div>
+        <div class="categorie">People</div>
+        <div class="categorie">Technology</div>
+        <div class="categorie">Travel</div>
+
+    </div>
+    </header>
+    <main>
+        <div class="gallery" id="gallery">
+            <div class="loading"> Loading....</div>
+        </div>
+    </main>
+    <footer>
+        <p>Galerie photo avec API Unsplash </p>
+    </footer>
+    </div>
+    <div>
+        <div class="modal-content">
+            <img id="modal-img" src="" alt="">
+            <div class="modal-info">
+                <h3 id="modal_title"></h3>
+                <p id="modal-author"></p>
+            </div>
+            <button class="close-btn" id="close-modal"><i class="fas fa-times"></i></button><!-- Icône croix -->
+            <button class="nav-btn prev-btn" id="prev-photo"><i class="fas fa-chevron-left"></i></button><!-- Icône <- -->
+            <button class="nav-btn next-btn" id="next-photo"><i class="fas fa-chevron-right"></i></button><!-- Icône -> -->
+        </div>
+    </div>
+</body>
+</html>
