@@ -99,3 +99,4 @@ Gestion de la mémoire avec les event listeners
 -Partage du code avec pairs
 -Intégration des feedbacks
 -Amélioration continue
+***Lien vers la page GitHub Pages : https://oumaymamatmaty.github.io/matmaty_oumayma_galerie_photos/
