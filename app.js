@@ -52,6 +52,22 @@ closeModal.addEventListener('click',()=>{
 //
 prevPhoto.addEventListener('click',showPrevPhoto);//showPrevPhoto est la fonction qui permet d'afficher la photo précédente en cliquant sur◀️
 nextPhoto.addEventListener('click',showNextPhoto);//showNextPhoto est la fonction qui permet d'afficher la photo suivante en cliquant sur▶️
+modal.addEventListener('click',(e)=>{
+    if(e.target === modal ){
+        modal.classList.remove('active')
+    }
+});//fermer la modal en cliquant a l'exterieur
+document.addEventListener('keydown',(e)=>{
+    if(modal.classList.contains('active')){
+        if(e.key === 'Escape'){
+            modal.classList.remove('active');
+        }else if(e.key === 'ArrowLeft'){
+            showPrevPhoto();
+        }else if(e.key === 'ArrowRight'){
+            showNextPhoto();
+        }
+    }
+}) ;//navigation au clavier
  
 });
 //fonction pour effectuer une recherche
@@ -139,7 +155,7 @@ function setupPagination(){
     for(let i=1;i<=totalPages;i++){
         const pageBtn=document.createElement('button');//creation du button de pagination
         pageBtn.className='page-btn';
-        if(i===currentPage){
+        if(i === currentPage){
             pageBtn.classList.add('active');
         }//activer le button de la page courrante
         pageBtn.textContent =i;
